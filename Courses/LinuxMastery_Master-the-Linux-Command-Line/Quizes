@@ -1,0 +1,141 @@
+#Teste 01: Terminal Concepts Quiz
+- The Sell is what interprets commands for meaning when they are submitted through the terminal?
+(x) True
+- Linux Commands follow a CommandName -options Inputs Structure
+(x) True
+- Some Commands can have long form and short form options.
+(x) True
+- Long form options have one dash (-) and short form options have two dashes (--)
+(x) False
+
+#Teste 02: Linux Manual Quiz
+- How would you open the manual page for a command called updatedb from section 8 of the manual?
+(x) man 8 updatedb
+- If a specific section is not specified, which section of the manual will the man command search first?
+(X) Section 01 - User Commands
+
+#Teste 03 : Command Input + Output Quiz
+- How many ways in total are there to get data into and out of command?
+(x) 4 : There are 2 Inputs and 2 Outputs which totals 4.
+- Which Answer Only Contains Data Streams
+(x) Standard Output, Standard Input and Standar Error.
+- What is Standard Output Connected to By Default?
+(x) Your Terminal
+- What is Standard Error Connected to by Default?
+(x) The Terminal
+- What is the Standard Input Data Stream Connected to by default?
+(x) The keyboard
+
+#Teste 04: Redirection Quiz
+- What Stream number is Standard Error?
+(X) 2
+- What Stream Number is Standard Input
+(x) 0
+- What Stream number is Standard Output?
+(x) 1
+- How would you redirect the standard output of the ls  command to a file called output.txt?
+(x) ls > output.txt
+- How would you redirect the standard output of the ls  command to output.txt  but at the same time redirect standard error to error.txt ?
+(x) ls 1> output.txt 2> error.txt
+- What is the difference between >  and >> ?
+(x) > writes to a file but deletes everything that is in the file first (truncate the file). >> appends data to what is already there.
+
+#Teste 05: Piping Quiz
+- What is piping in Linux?
+(x) A way of connectiong commands together.
+(x) A way of passing data from the standard output of one command to the standard input of another.
+(x) Totally awesome.
+- How would I pipe the standard output from command A to the standard input of command B?
+(x) A | B
+- How would we use the tee command when piping together CommandA, CommandB and CommandC to save a snapshot of CommandB's output to snapshot.txt?
+(X) commandA | commandB | tee snapshot.txt | commandC
+- How would I pipe data from CommandA  to CommandB  when CommandB  doesn't accept standard input and only accepts Command Line arguments?
+(x) commandA | xargs commandB
+
+#Teste 06: File system navigation Quiz
+- What is the difference between an absolute file path and a relative file path?
+(x) An absolute file path starts at the root (/) folder and a relative file path starts from the shells current working directory.
+- Which of these is an absolute file path?
+(x) /home/mewmew/Documents/file1.txt
+- What does the pwd command do?
+(x) It prints the path to the current working directory.
+- What would the command ls /home/sam/Documents do?
+(x) It will list out the contents of sam's Documents folder.
+- I run the pwd  command and I see that I am in the /etc/dhcp folder.
+	If I now run the cd  command with no command line arguments, where will the shell go to?
+(x) It will go to the current user's home directory.
+- What happens if we do cd .. 
+(x) The shell moves up one folder.
+
+#Teste 07: Wildcards Quiz
+- Which of these Commands would list all the files in your home directory that ended in .txt  (remembering that ~  means "home directory")
+(X) ls ~/*.txt
+- Which of these regular expressions would match a file named fileA.txt  (6 Possible Choices)
+(x) * , file?.txt , file* , *.txt , file[A-Z].txt
+- Which of these regular expressions would match these files: 
+important_report1A.pdf , important_report1B.pdf , important_report1C.pdf 
+(x) *[0-9][A-Z].pdf
+
+#Teste 08: Creating files and folders Quiz
+- How would you create a new file called report.txt in the Documents folder in your Home Directory? 
+(x) touch ~/Documents/report.txt
+- How would we create a folder called "holiday" in the Pictures directory within our home folder?
+(x) mkdir ~/Pictures/holiday
+- How would we create a folder called A and inside of that, a folder called B and inside of that a folder called C, all in one go?
+(x) mkdir -p A/B/C
+
+#Teste 09: Nano Quiz
+- In Nano, what is the keyboard shortcut to execute ^O ?
+(x) Ctrl + O
+- In nano what is the keyboard shortcut for M-B ?
+(x) ALT + B
+
+#Teste 10: Locate command Quiz
+- The locate  command Uses a database in order to function...
+(x) True
+- You create a new file called important.txt  but it has been 2 hours since your locate  database has been updated. 
+Will the locate  command be able to find important.txt ?
+(x) No!
+- How would you update the database that the locate command uses?
+(x) sudo updatedb
+
+#Teste 11: Find command quiz
+- The find commanbd uses a database in order to do its searching
+(x) False
+- How would we get the find  command to start at the /etc  folder and limit its search to only 4 levels deep?
+(X) find /etc -maxdepth 4
+- How would you limit the find  command to start searching from the /etc  folder but limit the search to 4 levels of depth and also only show directories?
+(X) find /etc -maxdepth 4 -type d
+- How would we use the find command to list all the files on our file system that have file names ending in ".txt", starting from the base of the file system (the / directory)?
+(x) find / -type f -name "*.txt"
+- How would you use the find  command to start searching from the /etc  folder up to a maximum of 4 levels deep for all files that are over 100 kibibytes (KiB) in size?
+(X) find /etc -maxdepth 4 -type f -size +100k
+- How would you use the find  command to  search for every file below your home directory that is over 5 MebiBytes (MiB) in size and execute the rm  command on the results?
+(X) find ~ -type f -size +5M -exec rm {} \;
+
+#Teste 12: Sorting Quiz
+- The Sort command sorts "largest first" by default (i.e. from Z to A or from 100 to 1)
+(x) False
+- True or False? sort -k 5rh  would use a KEYDEF to sort data tabular data using the 5th Column of the data, but sort human readable data in a reverse manner.
+(x) True
+
+#Teste 13: Bash Scripts Quiz
+- What is the purpose of the "she-bang" line in a bash script?
+(x) To let the shell know that the file isn't a normal text file and that it should be interpreted as code using the interpreter defined in the she-bang line.
+
+#Teste 14: Software Management Quiz
+- Why would you update the apt-cache?
+(X)	All the questions↙️:
+	To ensure that your package lists are up to date.
+	To make it possible to upgrade software.
+	To download new package lists that ou dont have yet.
+-If you want to update all the software on your system would you use...
+(X) sudo apt-get upgrade
+- True or False? All open-source software is Free Software.
+(X) False
+-True or False? Linux is an Operating System.
+(X)False
+- What command should you use to uninstall a package from your system
+(X)sudo apt-get purge <package name>
+- What command should you use to remove any dangling dependency packages that are no longer required on your system?
+(X) sudo apt-get autoremove
