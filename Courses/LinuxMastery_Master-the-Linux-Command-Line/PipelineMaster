@@ -1,2 +1,0 @@
-ls -a /etc > file1.txt | xargs ls -a /run > file2.txt
-cat file1.txt file2.txtt >> unsorted.txt | sort -r reversed.txt
