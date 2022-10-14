@@ -8,6 +8,7 @@
 
 <p align="center">
 	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/mewmewdevart/Commands4Fun?color=6272a4" />
+	<img alt="Main language" src="https://img.shields.io/github/languages/top/mewmewdevart/Commands4Fun?color=6272a4"/>
 	<img alt="Main language" src="https://img.shields.io/github/license/mewmewdevart/Commands4Fun?color=6272a4"/>
 </p>
 
